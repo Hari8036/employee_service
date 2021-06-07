@@ -36,6 +36,7 @@ public class EmployeeController {
 
 	@PostMapping("/add-employee")
 	public Object addEmployee(@RequestBody Employee employee) {
+		logger.info(employee.toString());
 		return employeeService.addEmployee(employee);
 
 	}
