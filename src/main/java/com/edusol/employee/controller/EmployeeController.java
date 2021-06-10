@@ -67,6 +67,8 @@ public class EmployeeController {
 
 	@PutMapping("/update-employee")
 	public Object updateEmployee(@RequestBody Employee employee) {
+		logger.info("Employee Deatils:"+employee.toString());
+	
 		return employeeService.updateEmployee(employee);
 
 	}
